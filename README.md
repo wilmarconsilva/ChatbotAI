@@ -10,7 +10,7 @@
 
 - Criação do grupo no WhatsApp para definição das demandas e responsabilidades;
 - Criação do repositório no GitHub;
-- Levantamento das informações a serem tratadas;
+- Levantamento das informações a serem tratadas.
 
 #### Semana 2 
 
