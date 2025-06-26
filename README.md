@@ -15,4 +15,4 @@
 #### Semana 2 
 
 - Tratamento das informações;
-- Criação do arquivo MarkDown com a base de conhecimento do Chatbot.
+- Criação do arquivo MarkDown que contém base de conhecimento do Chatbot.
