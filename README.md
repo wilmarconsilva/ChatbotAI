@@ -12,7 +12,7 @@
 
 - Criação do repositório no GitHub;
 
-- Levantamento das informações a serem tratadas.
+- Levantamento das informações a serem tratadas;
 
     - Informações a serem tratadas:
         - Planos de Ensino do Curso de Sistemas de Informação:
@@ -58,7 +58,7 @@
             40. Trabalho de Conclusão de Curso 1  
             41. Ética e Cidadania  
 
-        - Projeto Pedagógico do Curso Sistemas de Informação
+        - Projeto Pedagógico do Curso Sistemas de Informação.
 
 #### Semana 2 
 
