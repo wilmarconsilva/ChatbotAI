@@ -29,7 +29,7 @@ Base de Conhecimento (em formato Markdown):
 
 def carregar_base_conhecimento_md():
     try:
-        with open("base_conhecimento.md", "r", encoding="utf-8") as f:
+        with open("../base_conhecimento.md", "r", encoding="utf-8") as f:
             return f.read()
     except FileNotFoundError:
         print("ERRO: Arquivo 'base_conhecimento.md' não encontrado. Verifique se ele está na mesma pasta do app.py")
