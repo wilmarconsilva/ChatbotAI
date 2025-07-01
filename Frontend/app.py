@@ -1,6 +1,7 @@
 import streamlit as st
 import time
 import streamlit.components.v1 as components
+import requests  # Adicionado para chamadas HTTP
 
 # Inicialização do session_state
 if 'api_key' not in st.session_state:
@@ -134,19 +135,36 @@ if prompt := st.chat_input("Digite sua mensagem..."):
     with chat_container.chat_message("user"):
         st.markdown(prompt)
     
-    # Simular resposta do assistente com animação
+    # Resposta do assistente (chamada real à API Flask)
     with chat_container.chat_message("assistant"):
         message_placeholder = st.empty()
         full_response = ""
         
-        # Simulação de resposta
-        simulated_response = "Esta é uma simulação de resposta. Na implementação real, esta resposta virá da API do Google Gemini. Você digitou: " + prompt
+        try:
+            # Chamar a API Flask que está rodando na porta 5000
+            response = requests.post(
+                "http://localhost:5000/perguntar",
+                headers={"x-api-key": st.session_state.api_key},
+                json={"pergunta": prompt}
+            )
+            
+            if response.status_code == 200:
+                resposta = response.json().get("resposta", "Resposta não encontrada")
+            else:
+                resposta = f"Erro na API: {response.status_code} - {response.text}"
+        except requests.exceptions.ConnectionError:
+            resposta = "Erro: Não foi possível conectar à API Flask. Verifique se o servidor está rodando na porta 5000."
+        except Exception as e:
+            resposta = f"Erro inesperado: {str(e)}"
         
-        for char in simulated_response:
-            full_response += char
+        # Exibir a resposta de forma animada
+        full_response_display = ""
+        for char in resposta:
+            full_response_display += char
             time.sleep(0.02)
-            message_placeholder.markdown(full_response + "▌")
+            message_placeholder.markdown(full_response_display + "▌")
         
-        message_placeholder.markdown(full_response)
+        message_placeholder.markdown(full_response_display)
+        full_response = resposta
     
-    st.session_state.messages.append({"role": "assistant", "content": simulated_response})
+    st.session_state.messages.append({"role": "assistant", "content": full_response})
