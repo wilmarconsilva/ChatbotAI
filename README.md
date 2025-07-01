@@ -80,4 +80,21 @@
 - Desenvolvimento das interfaces;
 - Comando para rodar a aplicação: streamlit run app.py
 
+### Saulo Benedetti - Desenvolvedor Backend
+
+#### Semana 1
+
+- Participação nas discussões iniciais do grupo para definição do escopo e das responsabilidades de cada integrante.
+- Análise dos requisitos para o backend, focando na integração com a API do Google Gemini e na lógica de comunicação com o frontend.
+- Desenvolvimento da estrutura inicial do servidor backend utilizando Python e Flask.
+- Criação da primeira versão do endpoint ``POST /perguntar``, capaz de receber e processar requisições.
+- Projeto do "cérebro" do agente: elaboração do prompt de sistema com as diretrizes de comportamento, incluindo a regra crucial para não "alucinar" e responder apenas com base no conteúdo fornecido.
+
+#### Semana 2
+
+- Realização de uma chamada de alinhamento com a equipe para definir a arquitetura final de autenticação da API.
+- Com base na decisão da equipe, refatorei o backend para adotar o modelo de chave de API via header (``X-API-Key``), onde o usuário final fornece sua própria chave na interface.
+- Depuração (debugging) e otimização da comunicação com a API do Gemini, resolvendo erros de status ``404 (Not Found)`` e ``429 (Quota Exceeded)``.
+- Finalização da documentação da API para o Desenvolvedor Frontend, detalhando o endpoint, método, headers, corpo da requisição e os possíveis formatos de resposta (sucesso e erro).
+
 
