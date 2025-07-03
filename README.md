@@ -14,19 +14,38 @@
 
     - O sistema foi desenvolvido com foco em garantir precisão, clareza e confiabilidade nas respostas, respeitando os limites de uso da API do Google Gemini;
 
+### Guia de como iniciar o Agente
+    -git clone https://github.com/wilmarconsilva/ChatbotAI
+    -cd ChatbotAI
+
+    - Criar ambiente virtual:
+    - python3 -m venv venv
+    - source venv/bin/activate  # Linux/macOS
+    - venv\Scripts\activate     # Windows
+
+    - Instalar dependencia:
+    - pip install -r requirements.txt
+
+    - Se não existir o requirements.txt, crie-o com o conteúdo: "pip install flask streamlit google-generativeai"
+
     - Para iniciar o backend, siga as instruções:
 
       Acessar a pasta cd Backend e execute o comando "python3 app.py"
      
     - Para iniciar o frontend,  siga as instruções:
-      ```
+      
       Acessar a pasta cd Frontend e execute o comando "python3 -m streamlit run app.py"
 
-    - Lembre-se de instalar as bibliotecas: "pip install flask streamlit google-generativeai"
-      ```
     - Após acessar o site, no canto superior direito, terá um botão em forma de engrenagem, após clicar, deverá ser inserido a API KEY, crucial para o funcionamento do chat bot .
 
     -Agora, realize perguntas, que em questão de segundos, será respondido.
+
+## Pré-requisitos
+
+- Python 3.10 ou superior
+- Conta no Google com acesso à API Gemini (https://aistudio.google.com/app/apikey)
+- Navegador moderno (Google Chrome, Firefox, etc.)
+- Git instalado
 
 ## Diário de Bordo de Contribuições
 
