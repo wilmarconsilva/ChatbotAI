@@ -98,3 +98,15 @@
 - Finalização da documentação da API para o Desenvolvedor Frontend, detalhando o endpoint, método, headers, corpo da requisição e os possíveis formatos de resposta (sucesso e erro).
 
 
+### Lucas Miotto Siarpinski - Gerente de Projetos e QA
+
+#### Semana 1
+
+- Contribuição nas reuniões iniciais do grupo para estabelecer o escopo do projeto e definir as responsabilidades de cada membro.
+- Acompanhei o processo de entregas do que ia sendo conversado durante a semana no grupo do WhatsApp.
+#### Semana 2
+
+- Acompanhamento da atividade no grupo.
+- Realização de testes para averiguar o funcionamente do AgenteIA.
+- Atualização do arquivo README com guias e instruções claras de como funciona o sistema.
+- Documentação dos testes realizados.
