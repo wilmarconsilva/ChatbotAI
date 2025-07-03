@@ -2,7 +2,34 @@
 
 ## Instruções do Agente
 
+- Este agente conversacional foi desenvolvido para responder perguntas relacionadas ao curso de Sistemas de Informação, utilizando uma base de conhecimento construída a partir dos planos de ensino e documentos oficiais do curso;
+
+    - O agente deve responder somente com base na base de conhecimento fornecida, evitando respostas especulativas ou “alucinações”;
+
+    - As perguntas são enviadas via interface frontend, que se comunica com o backend através da API RESTful;
+
+    - A autenticação na API é feita via chave de API, que o usuário insere na interface frontend e é enviada no header `X-API-Key` nas requisições ao backend;
+
+    - As respostas retornam em formato JSON contendo a resposta gerada ou mensagens de erro, caso haja problemas na requisição;
+
+    - O sistema foi desenvolvido com foco em garantir precisão, clareza e confiabilidade nas respostas, respeitando os limites de uso da API do Google Gemini;
+
+    - Para iniciar o backend, siga as instruções:
+
+      Acessar a pasta cd Backend e execute o comando "python3 app.py"
+     
+    - Para iniciar o frontend,  siga as instruções:
+      ```
+      Acessar a pasta cd Frontend e execute o comando "python3 -m streamlit run app.py"
+
+    - Lembre-se de instalar as bibliotecas: "pip install flask streamlit google-generativeai"
+      ```
+    - Após acessar o site, no canto superior direito, terá um botão em forma de engrenagem, após clicar, deverá ser inserido a API KEY, crucial para o funcionamento do chat bot .
+
+    -Agora, realize perguntas, que em questão de segundos, será respondido.
+
 ## Diário de Bordo de Contribuições
+
 
 ### Wilson - Engenheiro de Dados
 
@@ -110,3 +137,14 @@
 - Realização de testes para averiguar o funcionamente do AgenteIA.
 - Atualização do arquivo README com guias e instruções claras de como funciona o sistema.
 - Documentação dos testes realizados.
+
+
+## Garantia da Qualidade (QA)
+
+#### Planejamento de Testes e Validação
+-A seguir está a lista com perguntas-chave criadas com base nas disciplinas do curso de Sistemas de Informação da UNOESC Chapecó. Essas perguntas foram utilizadas para validar o chatbot FAQ com base na base de conhecimento oficial.
+
+- Cada pergunta foi classificada como Correta, Parcial ou Incorreta após a comparação da resposta gerada com o conteúdo programático das disciplinas.
+
+- link da planilha: https://docs.google.com/spreadsheets/d/1DFPyT9kk7VqowkOFtXk4ebkwjg3pW0MqmuXpiddmHkw/edit?usp=sharing
+
